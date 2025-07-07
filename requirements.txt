@@ -1,0 +1,25 @@
+# Interface
+streamlit==1.35.0
+
+# LangChain e LLMs locais
+langchain==0.2.0
+langchain-core==0.2.0
+langchain-community==0.2.0
+
+# Modelos Ollama
+ollama==0.1.7
+
+# Vetorização e RAG
+faiss-cpu==1.7.4
+
+# Embeddings e loaders
+tiktoken==0.6.0
+
+# Manipulação de variáveis de ambiente
+python-dotenv==1.0.1
+
+# CSV Loader depende de pandas
+pandas==2.2.2
+
+# Compatibilidade com o Python 3.10+ e melhorias
+typing-extensions>=4.10.0
