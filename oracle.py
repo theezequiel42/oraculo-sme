@@ -13,7 +13,7 @@ _ = load_dotenv(find_dotenv())
 # É necessário ter o Ollama instalado na sua máquina local
 # Ou no servidor que for utilizar.
 
-ollama_server_url = "http://192.168.1.5:11434" 
+ollama_server_url = "http://localhost:11434" 
 model_local = ChatOllama(model="llama3.1:8b-instruct-q4_K_S")
 
 @st.cache_data
@@ -39,7 +39,6 @@ Você é o Oráculo da Educação, um assistente inteligente especializado em da
 Seu trabalho é conversar com Servidores Públicos, Coordenadores e Gestores consultando a base de 
 conhecimentos da Secretaria, e dar uma resposta simples e precisa para eles, baseada na 
 base de dados da Secretaria de Educação de Fraiburgo, fornecida como contexto.
-Quando possível, cite os dados e trechos relevantes de onde a resposta foi obtida.
 Seja objetivo, mas acrescente insights úteis com base no conteúdo recuperado.
 Se a informação exata não estiver disponível, diga isso de forma transparente e proponha caminhos alternativos ou hipóteses embasadas.
 
@@ -51,7 +50,7 @@ Regras:
 
 Contexto: {context}
 
-Pergunta do cliente: {question}
+Pergunta do usuário: {question}
 """
 human = "{text}"
 prompt = ChatPromptTemplate.from_template(rag_template)
